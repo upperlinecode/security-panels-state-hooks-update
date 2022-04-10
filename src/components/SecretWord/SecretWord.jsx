@@ -10,33 +10,24 @@ const countSimilarLetters = (s1, s2) => {
   return count;
 };
 
-const SecretWord = ({ password }) => {
-  password = password.toUpperCase();
+const SecretWord = () => {
+  const password = "REACT";
   const [guess, setGuess] = useState("");
-
-  const winning = guess === password ? true : false;
-
-  const numberCorrect = countSimilarLetters(password, guess);
+  const winning = false;
+  const lettersCorrect = 0;
 
   return (
     <div className={"SecretWord" + (winning ? " winning" : " losing")}>
       <h1 className="directions">Enter the passphrase</h1>
       <div className="hint">
-        <h3>You said: {guess}</h3>
-        <h3>Letters correct: {numberCorrect}</h3>
+        <h3>You said: xx</h3>
+        <h3>Letters correct: {lettersCorrect}</h3>
       </div>
       <div className="textHolder">
         <input
           type="text"
-          placeholder={`enter the ${password.length}-letter passphrase`}
-          onChange={(e) => {
-            if (e.target.value.length > 5) {
-              setGuess("");
-            } else {
-              setGuess(e.target.value.toUpperCase());
-            }
-          }}
-          value={guess}
+          placeholder={`enter the 5-letter passphrase`}
+          onChange={(e) => console.log(e.target.value)}
         ></input>
       </div>
     </div>

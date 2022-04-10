@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <SecretWord password="react" />
+      <SecretWord />
       <NumberDials />
       <Checkboxes />
       <ColorCaptcha />

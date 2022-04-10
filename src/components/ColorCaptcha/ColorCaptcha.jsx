@@ -31,7 +31,7 @@ const ColorCaptcha = () => {
             max="255"
             defaultValue={red}
             onChange={(e) => {
-              setRed(e.target.value);
+              console.log(e.target.value);
             }}
           />
         </div>
